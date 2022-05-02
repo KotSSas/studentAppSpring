@@ -1,55 +1,60 @@
 package com.example.studentappspring.entity;
 
+import com.sun.istack.NotNull;
 
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
 
 @Entity
 @Table(name = "students")
-
 public class Student {
+    @NotNull
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(name = "first_name",nullable = false)
-    private String first_name;
+    private Integer id;
+
+    @Column(name = "first_name", nullable = false)
+    private String firstName;
+
     @Column(name = "last_name")
-    private String last_name;
+    private String lastName;
+
     @Column(name = "email")
     private String email;
 
     public Student() {
+
     }
 
-    public Student(Long id, String first_name, String last_name, String email) {
-        this.id = id;
-        this.first_name = first_name;
-        this.last_name = last_name;
+    public Student(String firstName, String lastName, String email) {
+        super();
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
     }
 
-    @Id
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -59,6 +64,4 @@ public class Student {
     public void setEmail(String email) {
         this.email = email;
     }
-
-
 }
