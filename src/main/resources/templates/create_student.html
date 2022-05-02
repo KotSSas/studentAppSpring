@@ -8,8 +8,13 @@
 </head>
 <body>
 <div class="container">
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Add new student</a>
+        </div>
+    </nav>
     <div class="col -lg-6 col-md -6 col -sm 6 container justify-content-center card">
-        <h1 class="text-centre">Create new student</h1>
+
         <div class="card-body">
             <form th:action="@{/students}" th:object="${student}" method="post">
 
@@ -30,10 +35,16 @@
                 </div>
                 <div class="box-footer">
                     <button type="submit" class="btn btn-primary">Submit</button>
+
                 </div>
             </form>
         </div>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Warning!</strong> You need to fill all the forms above in order to add them to base.
+
+        </div>
     </div>
+
 </div>
 
 </body>

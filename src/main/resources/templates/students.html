@@ -8,14 +8,27 @@
 </head>
 <body>
 <div class="container">
-    <div class="row">
-        <h1>List Students</h1>
-    </div>
-    <div class="row">
-        <div class="col-lg-3">
-            <a th:href="@{/students/new}" class="butn btn-primary btn-sm mb-3">Add Student</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Students Base</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/students/new}">Add new student<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">This project was just made
+                        with learning purposes!</a>
+                </li>
+            </ul>
+
         </div>
-    </div>
+    </nav>
     <table class="table">
         <thead class="thead-dark">
         <tr>
