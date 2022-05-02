@@ -6,4 +6,6 @@ import java.util.List;
 
 public abstract class StudentService {
     public abstract List<Student> getAllStudents();
+
+    public abstract Student saveStudent(Student student);
 }

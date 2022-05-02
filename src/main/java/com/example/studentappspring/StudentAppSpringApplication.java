@@ -18,10 +18,10 @@ public class StudentAppSpringApplication  implements CommandLineRunner{
 
     @Override
     public void run(String... args) throws Exception {
-        Student student1 = new Student("Alex","aa","aaa");
-        studentRepository.save(student1);
-
-        Student student2 = new Student("Peter","Parker","aaa");
-        studentRepository.save(student2);
+//        Student student1 = new Student("Alex","aa","aaa");
+//        studentRepository.save(student1);
+//
+//        Student student2 = new Student("Peter","Parker","aaa");
+//        studentRepository.save(student2);
     }
 }
