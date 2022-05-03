@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Edit student</a>
+        </div>
+    </nav>
+    <div class="col -lg-6 col-md -6 col -sm 6 container justify-content-center card">
+
+        <div class="card-body">
+            <form th:action="@{/students/{id}(id=${student.id})}" th:object="${student}" method="post">
+
+                <div class="form-group">
+                    <label>Student first name</label>
+                    <input type="text" name="firstName" th:field="*{firstName}" class="form-control"
+                           placeholder="Enter Student first name"/>
+                </div>
+                <div class="form-group">
+                    <label>Student last name</label>
+                    <input type="text" name="firstName" th:field="*{lastName}" class="form-control"
+                           placeholder="Enter Student last name"/>
+                </div>
+                <div class="form-group">
+                    <label>Student email</label>
+                    <input type="text" name="firstName" th:field="*{email}" class="form-control"
+                           placeholder="Enter Student email"/>
+
+                </div>
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                </div>
+            </form>
+        </div>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Warning!</strong> You need to fill all the forms above in order to add them to base.
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

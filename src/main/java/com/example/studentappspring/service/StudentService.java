@@ -11,5 +11,7 @@ public abstract class StudentService {
 
     public abstract Student updateStudent(Student student);
 
+    public abstract void deleteStudent(Long id);
+
     public abstract Student getStudentById(Long id);
 }

@@ -32,6 +32,12 @@ public class StudentServiceImpl extends StudentService {
     }
 
     @Override
+    public void deleteStudent(Long id) {
+        studentRepository.deleteById(id);
+    }
+
+
+    @Override
     public Student getStudentById(Long id) {
         return studentRepository.findById(id).get();
     }
