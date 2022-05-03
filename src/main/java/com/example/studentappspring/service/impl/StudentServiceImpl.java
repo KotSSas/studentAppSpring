@@ -25,4 +25,14 @@ public class StudentServiceImpl extends StudentService {
     public Student saveStudent(Student student) {
         return studentRepository.save(student);
     }
+
+    @Override
+    public Student updateStudent(Student student) {
+        return studentRepository.save(student);
+    }
+
+    @Override
+    public Student getStudentById(Long id) {
+        return studentRepository.findById(id).get();
+    }
 }

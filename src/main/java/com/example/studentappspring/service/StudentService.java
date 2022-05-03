@@ -8,4 +8,8 @@ public abstract class StudentService {
     public abstract List<Student> getAllStudents();
 
     public abstract Student saveStudent(Student student);
+
+    public abstract Student updateStudent(Student student);
+
+    public abstract Student getStudentById(Long id);
 }
